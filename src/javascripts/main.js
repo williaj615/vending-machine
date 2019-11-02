@@ -1,6 +1,5 @@
 import 'bootstrap';
 import '../styles/main.scss';
-
 import apiKeys from './helpers/apiKeys.json';
 
 const init = () => {
