@@ -10,7 +10,7 @@ const buildTheMachine = () => {
     // 1. getMachines - returns first machine (hard coding) --DONE
     // 2. use MachineId to get all positions for that machine --DONE
     // 3. use MachineId to get all snack positions --DONE
-    // 4. use uid of snackpositions/positions to get available snacks for that machine
+    // 4. use uid of snackpositions/positions to get available snacks for that machine --DONE
     // 5. SMASH em - return an array of positions (in order A1, A2, A3, B1...)
 }
 
