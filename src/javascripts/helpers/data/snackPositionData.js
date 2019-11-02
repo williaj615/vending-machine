@@ -3,18 +3,18 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getAllPositionsByMachineId = (machineId) => new Promise((resolve, reject) => {
-    axios.get(`${baseUrl}/positions.json?orderBy="machineId"&equalTo="${machineId}"`)
+const getAllSnackPositionsByMachineId = (machineId) => new Promise((resolve, reject) => {
+    axios.get(`${baseUrl}/snackPositions.json?orderBy="machineId"&equalTo="${machineId}"`)
     .then((response) => {
-        const demPositions = response.data;
-        const positions = [];
-        Object.keys(demPositions).forEach((fbId) => {
-        demPositions[fbId].id = fbId;
-        positions.push(demPositions[fbId]);
+        const demSnackPositions = response.data;
+        const snackPositions = [];
+        Object.keys(demSnackPositions).forEach((fbId) => {
+        demSnackPositions[fbId].id = fbId;
+        snackPositions.push(demSnackPositions[fbId]);
         });
-        resolve(positions); 
+        resolve(snackPositions); 
     })
     .catch((error) => reject(error));
 })
 
-export default { getAllPositionsByMachineId }
+export default { getAllSnackPositionsByMachineId }

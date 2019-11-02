@@ -1,5 +1,6 @@
 import machineData from './machineData';
 import positionData from './positionData';
+import snackPositionData from './snackPositionData';
 
 const getCompleteMachine = () => new Promise ((resolve, reject) => {
     machineData.getMachine()
